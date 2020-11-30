@@ -1,3 +1,3 @@
 export default {
-    li: './li'
+  li: './li/jian/hua',
 }
