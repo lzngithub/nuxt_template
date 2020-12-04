@@ -3,7 +3,7 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'spa',
+  ssr: false,
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || 'nuxt',
+    title: process.env.npm_package_name || '木夕小镇',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -33,12 +33,19 @@ export default {
   css: [
     'element-ui/lib/theme-chalk/index.css',
     '@/assets/css/reset.css', // 引入全局样式
+    '@/assets/css/common.css', // 引入全局样式
   ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ['@/plugins/element-ui', '@/plugins/axios', '@/plugins/utils'],
+  plugins: [
+    { src: '~/plugins/element-ui', ssr: false },
+    { src: '~/plugins/axios', ssr: false },
+    { src: '~/plugins/utils', ssr: false },
+    { src: '~/plugins/vue-lazyload', ssr: false },
+  ],
+  // plugins: ['@/plugins/element-ui', '@/plugins/axios', '@/plugins/utils'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components

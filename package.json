@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-template",
+  "name": "muxi",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,8 +12,10 @@
     "@nuxtjs/axios": "^5.12.2",
     "element-ui": "^2.13.2",
     "nuxt": "^2.14.0",
+    "plupload": "^2.3.6",
     "sass": "^1.29.0",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "vue-lazyload": "^1.3.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

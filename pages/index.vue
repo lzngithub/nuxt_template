@@ -4,6 +4,9 @@
     <div class="she">{{ url.li }}</div>
     <div class="she">{{ $password }}</div>
     <div class="she">{{ universal }}</div>
+    <div class="img">
+      <img v-lazy="" alt="" mode="aspectFit" />
+    </div>
   </div>
 </template>
 
@@ -42,5 +45,9 @@ export default {
   .she {
     color: pink;
   }
+}
+.img {
+  width: 100px;
+  height: 100px;
 }
 </style>

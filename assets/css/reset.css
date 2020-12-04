@@ -49,7 +49,7 @@ b {
 .clearfloat {
   *zoom: 1;
 }
-.clearfloat:after {
+.clearfloat::after {
   content: '.';
   clear: both;
   display: block;
@@ -86,5 +86,4 @@ b {
   justify-content: space-around;
   -moz-box-pack: space-around;
   -webkit--moz-box-pack: space-around;
-  box-pack: space-around;
 }
